@@ -1,0 +1,163 @@
+.navbar {
+  background-color: var(--navbar-bg);
+  border-top: 2px solid var(--gold-text);
+  border-bottom: 2px solid var(--gold-text);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  color: var(--gold-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+}
+
+.navbar-toggler .text-warning {
+  color: var(--gold-text) !important;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--gold-text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: var(--gold);
+  background-color: rgba(255, 179, 56, 0.1);
+  transform: translateY(-1px);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logo-button:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-text);
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(255, 179, 56, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--navbar-bg);
+    border-top: 1px solid var(--gold-text);
+    border-bottom: 1px solid var(--gold-text);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar-collapse.show {
+    max-height: 300px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 179, 56, 0.2);
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-logo {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .logo-image {
+    width: 60px;
+    height: 60px;
+  }
+}

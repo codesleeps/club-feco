@@ -1,0 +1,207 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-text-wrapper {
+  display: grid;
+  grid-template-areas: "overlap";
+  place-content: center;
+  text-transform: uppercase;
+  height: 15vh;
+  margin-bottom: 2rem;
+}
+
+.hero-text-bg,
+.hero-text-fg {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3em, 15vw, 8rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+  margin-bottom: 1rem;
+}
+
+.hero-text-bg {
+  background-image: repeating-linear-gradient(
+    105deg,
+    var(--gold) 0%,
+    var(--dark-shadow) 5%,
+    var(--gold) 12%
+  );
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+
+.hero-text-fg {
+  background-image: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
+  color: #1e2127;
+  transform: scale(1);
+}
+
+.hero-button {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hero-button h1 {
+  background: linear-gradient(45deg, var(--gold), var(--light-shadow), var(--dark-shadow));
+  padding: 10px 25px;
+  margin: 12px;
+  display: inline-block;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #090909;
+  font-size: 1.6em;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button h1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 179, 56, 0.3);
+}
+
+.hero-button span {
+  position: absolute;
+  display: block;
+}
+
+/* Animated border effects for the button */
+.hero-button span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #090909);
+  animation: animateTop 2s linear infinite;
+}
+
+@keyframes animateTop {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.hero-button span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #0e0d0d);
+  animation: animateRight 2s linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.hero-button span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #0b0a0a);
+  animation: animateBottom 2s linear infinite;
+}
+
+@keyframes animateBottom {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.hero-button span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #0d0c0c);
+  animation: animateLeft 2s linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero-text-bg,
+  .hero-text-fg {
+    font-size: clamp(2em, 12vw, 5rem);
+    -webkit-text-stroke: 2px transparent;
+  }
+
+  .hero-button h1 {
+    font-size: 1.4em;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 350px;
+  }
+
+  .hero-text-bg,
+  .hero-text-fg {
+    font-size: clamp(1.5em, 10vw, 3rem);
+    letter-spacing: 0.5px;
+  }
+
+  .hero-button h1 {
+    font-size: 1.2em;
+    padding: 6px 15px;
+    margin: 8px;
+  }
+}

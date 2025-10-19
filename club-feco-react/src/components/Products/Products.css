@@ -1,0 +1,159 @@
+.products-container {
+  background-color: var(--primary-bg);
+}
+
+.product-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 179, 56, 0.2);
+}
+
+.product-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--primary-text);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.section-title:hover {
+  color: var(--gold-text);
+  transform: translateY(-2px);
+}
+
+.product-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.product-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.product-section .col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.product-section .col-lg-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.product-section .img-fluid {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.product-section h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #dc3545;
+}
+
+.product-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.product-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.product-section li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.product-section li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #198754;
+  font-weight: bold;
+}
+
+.product-cards {
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .product-section .col-lg-4,
+  .product-section .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .product-section h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .product-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .product-section p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section {
+    padding: 1.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .product-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .product-section p {
+    font-size: 1rem;
+  }
+
+  .product-section ul {
+    font-size: 1rem;
+  }
+}
