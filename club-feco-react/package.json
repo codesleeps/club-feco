@@ -22,7 +22,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME",
+  "homepage": "https://codesleeps.github.io/club_feco",
   "eslintConfig": {
     "extends": [
       "react-app",
