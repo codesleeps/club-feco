@@ -5,17 +5,17 @@ const Carousel = () => {
   const carouselItems = [
     {
       id: 1,
-      image: '/images/carousel/cannabisPlant.webp',
+      image: '/images/img/carousel/cannabisPlant.webp',
       alt: 'Cannabis Plant'
     },
     {
       id: 2,
-      image: '/images/carousel/gummies.webp',
+      image: '/images/img/carousel/gummies.webp',
       alt: 'Colored Gummy Bears'
     },
     {
       id: 3,
-      image: '/images/carousel/tincturePipe.webp',
+      image: '/images/img/carousel/tincturePipe.webp',
       alt: 'CBD Tincture Collection'
     }
   ];
