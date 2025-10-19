@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/club_feco/static/css/main.75c38320.css",
+    "main.js": "/club_feco/static/js/main.82c98a53.js",
+    "index.html": "/club_feco/index.html",
+    "main.75c38320.css.map": "/club_feco/static/css/main.75c38320.css.map",
+    "main.82c98a53.js.map": "/club_feco/static/js/main.82c98a53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75c38320.css",
+    "static/js/main.82c98a53.js"
+  ]
+}
