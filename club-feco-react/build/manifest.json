@@ -1,8 +1,8 @@
 {
-  "id": "/index.html",
+  "id": "/",
   "name": "Club Feco",
   "short_name": "Feco",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#020203",
   "theme_color": "#020203",
