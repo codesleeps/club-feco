@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { cssVariables } from './constants/colors';
 import './App.css';
 
@@ -15,8 +14,7 @@ import ChatBot from './components/ChatBot/ChatBot';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
         {/* Inject CSS variables */}
         <style>{cssVariables}</style>
 
@@ -33,7 +31,6 @@ function App() {
         {/* AI Chat Bot */}
         <ChatBot />
       </div>
-    </Router>
   );
 }
 
